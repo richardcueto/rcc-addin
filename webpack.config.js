@@ -13,6 +13,8 @@ async function getHttpsOptions() {
   return { ca: httpsOptions.ca, key: httpsOptions.key, cert: httpsOptions.cert };
 }
 
+const path = require('path');
+
 module.exports = async (env, options) => {
   const dev = options.mode === "development";
   const config = {
