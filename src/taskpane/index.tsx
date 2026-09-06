@@ -19,9 +19,9 @@ Office.onReady(() => {
   );
 });
 
-if ((module as any).hot) {
-  (module as any).hot.accept("./components/App", () => {
-    const NextApp = require("./components/App").default;
-    root?.render(NextApp);
+/* HMR (Hot Module Replacement) nativo de Vite */
+if (import.meta.hot) {
+  import.meta.hot.accept("./components/App", () => {
+    // Vite recarga el componente automáticamente sin necesidad de re-renderizar manualmente
   });
 }
