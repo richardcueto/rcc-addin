@@ -8,6 +8,7 @@ permissions:
   contents: read
   pages: write
   id-token: write
+  actions: write # Permiso clave necesario para gestionar subidas de artefactos
 
 concurrency:
   group: "pages"
@@ -28,18 +29,15 @@ jobs:
         with:
           node-version: 22
           cache: 'npm'
-          cache-dependency-path: './package-lock.json'
 
       - name: Install dependencies
-        working-directory: ./
-        run: npm install --force
+        run: npm ci
 
       - name: Build
-        working-directory: ./
         run: npm run build
 
       - name: Setup Pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v5
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
