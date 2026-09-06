@@ -27,6 +27,9 @@ module.exports = async (env, options) => {
       commands: "./src/commands/commands.ts",
     },
     output: {
+      path: path.resolve(__dirname, 'dist'),
+      filename: '[name].js',
+      publicPath: '/rcc-addin/',
       clean: true,
     },
     resolve: {
