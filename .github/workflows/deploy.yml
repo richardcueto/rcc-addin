@@ -31,11 +31,11 @@ jobs:
           cache-dependency-path: './package-lock.json'
 
       - name: Install dependencies
-        working-directory: ./frontend
+        working-directory: ./
         run: npm install --force
 
       - name: Build
-        working-directory: ./frontend
+        working-directory: ./
         run: npm run build
 
       - name: Setup Pages
