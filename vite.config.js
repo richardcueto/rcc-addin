@@ -6,7 +6,7 @@ import os from 'os';
 export default defineConfig(({ command }) => {
   const isDev = command === 'serve';
   const certPath = path.join(os.homedir(), '.office-addin-dev-certs');
-
+  
   return {
     base: '/rcc-addin/',
     server: {
@@ -16,6 +16,15 @@ export default defineConfig(({ command }) => {
         key: fs.readFileSync(path.join(certPath, 'localhost.key')),
         cert: fs.readFileSync(path.join(certPath, 'localhost.crt')),
       } : false,
+    },
+    build: {
+      rollupOptions: {
+        input: {
+          taskpane: 'index.html',
+          // Descomenta la siguiente línea solo si llegas a crear un commands.html en la raíz
+          commands: 'commands.html', 
+        },
+      },
     },
   };
 });

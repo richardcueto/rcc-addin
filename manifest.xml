@@ -16,7 +16,7 @@
     <Host Name="Workbook"/>
   </Hosts>
   <DefaultSettings>
-    <SourceLocation DefaultValue="https://localhost:5173/rcc-addin/taskpane.html"/>
+    <SourceLocation DefaultValue="https://localhost:5173/rcc-addin/index.html"/>
   </DefaultSettings>
   <Permissions>ReadWriteDocument</Permissions>
 
@@ -35,44 +35,134 @@
             <!-- PESTAÑA PERSONALIZADA -->
             <CustomTab id="TabRichardAddin">
 
+              <Group id="GroupPython">
+                <Label resid="GroupPython.Label"/>
+                <Icon>
+                  <bt:Image size="16" resid="Icon.16x16"/>
+                  <bt:Image size="32" resid="Icon.32x32"/>
+                  <bt:Image size="80" resid="Icon.80x80"/>
+                </Icon>
+
+                <Control xsi:type="Button" id="BtnTaskpaneRuta">
+                  <Label resid="BtnTaskpaneRuta.Label"/>
+                  <Supertip>
+                    <Title resid="BtnTaskpaneRuta.Label"/>
+                    <Description resid="BtnTaskpaneRuta.Tooltip"/>
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="Icon.16x16"/>
+                    <bt:Image size="32" resid="Icon.32x32"/>
+                    <bt:Image size="80" resid="Icon.80x80"/>
+                  </Icon>
+                  <Action xsi:type="ShowTaskpane">
+                    <TaskpaneId>TaskpaneRutaId</TaskpaneId>
+                    <SourceLocation resid="TaskpaneRuta.Url"/>
+                  </Action>
+                </Control>
+              </Group>
+
               <Group id="GroupProductividad">
                 <Label resid="GroupProductividad.Label"/>
-                <Icon><bt:Image size="16" resid="Icon.16x16"/><bt:Image size="32" resid="Icon.32x32"/><bt:Image size="80" resid="Icon.80x80"/></Icon>
+                <Icon>
+                  <bt:Image size="16" resid="Icon.16x16"/>
+                  <bt:Image size="32" resid="Icon.32x32"/>
+                  <bt:Image size="80" resid="Icon.80x80"/>
+                </Icon>
+
                 <Control xsi:type="Button" id="BtnMayuscula">
                   <Label resid="BtnMayuscula.Label"/>
-                  <Supertip><Title resid="BtnMayuscula.Label"/><Description resid="BtnMayuscula.Tooltip"/></Supertip>
-                  <Icon><bt:Image size="16" resid="Icon.16x16"/><bt:Image size="32" resid="Icon.32x32"/><bt:Image size="80" resid="Icon.80x80"/></Icon>
-                  <Action xsi:type="ExecuteFunction"><FunctionName>Mayuscula_Click</FunctionName></Action>
+                  <Supertip>
+                    <Title resid="BtnMayuscula.Label"/>
+                    <Description resid="BtnMayuscula.Tooltip"/>
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="Icon.16x16"/>
+                    <bt:Image size="32" resid="Icon.32x32"/>
+                    <bt:Image size="80" resid="Icon.80x80"/>
+                  </Icon>
+                  <Action xsi:type="ExecuteFunction">
+                    <FunctionName>Mayuscula_Click</FunctionName>
+                  </Action>
                 </Control>
+
                 <Control xsi:type="Button" id="BtnMinuscula">
                   <Label resid="BtnMinuscula.Label"/>
-                  <Supertip><Title resid="BtnMinuscula.Label"/><Description resid="BtnMinuscula.Tooltip"/></Supertip>
-                  <Icon><bt:Image size="16" resid="Icon.16x16"/><bt:Image size="32" resid="Icon.32x32"/><bt:Image size="80" resid="Icon.80x80"/></Icon>
-                  <Action xsi:type="ExecuteFunction"><FunctionName>Minuscula_Click</FunctionName></Action>
+                  <Supertip>
+                    <Title resid="BtnMinuscula.Label"/>
+                    <Description resid="BtnMinuscula.Tooltip"/>
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="Icon.16x16"/>
+                    <bt:Image size="32" resid="Icon.32x32"/>
+                    <bt:Image size="80" resid="Icon.80x80"/>
+                  </Icon>
+                  <Action xsi:type="ExecuteFunction">
+                    <FunctionName>Minuscula_Click</FunctionName>
+                  </Action>
                 </Control>
+
                 <Control xsi:type="Button" id="BtnAgruparCeldas">
                   <Label resid="BtnAgruparCeldas.Label"/>
-                  <Supertip><Title resid="BtnAgruparCeldas.Label"/><Description resid="BtnAgruparCeldas.Tooltip"/></Supertip>
-                  <Icon><bt:Image size="16" resid="Icon.16x16"/><bt:Image size="32" resid="Icon.32x32"/><bt:Image size="80" resid="Icon.80x80"/></Icon>
-                  <Action xsi:type="ExecuteFunction"><FunctionName>Agruparceldas_Click</FunctionName></Action>
+                  <Supertip>
+                    <Title resid="BtnAgruparCeldas.Label"/>
+                    <Description resid="BtnAgruparCeldas.Tooltip"/>
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="Icon.16x16"/>
+                    <bt:Image size="32" resid="Icon.32x32"/>
+                    <bt:Image size="80" resid="Icon.80x80"/>
+                  </Icon>
+                  <Action xsi:type="ExecuteFunction">
+                    <FunctionName>Agruparceldas_Click</FunctionName>
+                  </Action>
                 </Control>
+
                 <Control xsi:type="Button" id="BtnOracion">
                   <Label resid="BtnOracion.Label"/>
-                  <Supertip><Title resid="BtnOracion.Label"/><Description resid="BtnOracion.Tooltip"/></Supertip>
-                  <Icon><bt:Image size="16" resid="Icon.16x16"/><bt:Image size="32" resid="Icon.32x32"/><bt:Image size="80" resid="Icon.80x80"/></Icon>
-                  <Action xsi:type="ExecuteFunction"><FunctionName>Oracion_Click</FunctionName></Action>
+                  <Supertip>
+                    <Title resid="BtnOracion.Label"/>
+                    <Description resid="BtnOracion.Tooltip"/>
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="Icon.16x16"/>
+                    <bt:Image size="32" resid="Icon.32x32"/>
+                    <bt:Image size="80" resid="Icon.80x80"/>
+                  </Icon>
+                  <Action xsi:type="ExecuteFunction">
+                    <FunctionName>Oracion_Click</FunctionName>
+                  </Action>
                 </Control>
+
                 <Control xsi:type="Button" id="BtnPrimera">
                   <Label resid="BtnPrimera.Label"/>
-                  <Supertip><Title resid="BtnPrimera.Label"/><Description resid="BtnPrimera.Tooltip"/></Supertip>
-                  <Icon><bt:Image size="16" resid="Icon.16x16"/><bt:Image size="32" resid="Icon.32x32"/><bt:Image size="80" resid="Icon.80x80"/></Icon>
-                  <Action xsi:type="ExecuteFunction"><FunctionName>Primera_Click</FunctionName></Action>
+                  <Supertip>
+                    <Title resid="BtnPrimera.Label"/>
+                    <Description resid="BtnPrimera.Tooltip"/>
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="Icon.16x16"/>
+                    <bt:Image size="32" resid="Icon.32x32"/>
+                    <bt:Image size="80" resid="Icon.80x80"/>
+                  </Icon>
+                  <Action xsi:type="ExecuteFunction">
+                    <FunctionName>Primera_Click</FunctionName>
+                  </Action>
                 </Control>
+
                 <Control xsi:type="Button" id="BtnPdf">
                   <Label resid="BtnPdf.Label"/>
-                  <Supertip><Title resid="BtnPdf.Label"/><Description resid="BtnPdf.Tooltip"/></Supertip>
-                  <Icon><bt:Image size="16" resid="Icon.16x16"/><bt:Image size="32" resid="Icon.32x32"/><bt:Image size="80" resid="Icon.80x80"/></Icon>
-                  <Action xsi:type="ExecuteFunction"><FunctionName>pdf_Click</FunctionName></Action>
+                  <Supertip>
+                    <Title resid="BtnPdf.Label"/>
+                    <Description resid="BtnPdf.Tooltip"/>
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="Icon.16x16"/>
+                    <bt:Image size="32" resid="Icon.32x32"/>
+                    <bt:Image size="80" resid="Icon.80x80"/>
+                  </Icon>
+                  <Action xsi:type="ExecuteFunction">
+                    <FunctionName>pdf_Click</FunctionName>
+                  </Action>
                 </Control>
                 
                 <Control xsi:type="Button" id="TaskpaneButton">
@@ -110,8 +200,9 @@
       </bt:Images>
       <bt:Urls>
         <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://go.microsoft.com/fwlink/?LinkId=276812"/>
-        <bt:Url id="Commands.Url" DefaultValue="https://localhost:5173/rcc-addin/commands.html"/>
-        <bt:Url id="Taskpane.Url" DefaultValue="https://localhost:5173/rcc-addin/taskpane.html"/>
+        <bt:Url id="Commands.Url" DefaultValue="https://localhost:5173/rcc-addin/index.html"/>
+        <bt:Url id="TaskpaneRuta.Url" DefaultValue="https://localhost:5173/rcc-addin/index.html"/>
+        <bt:Url id="Taskpane.Url" DefaultValue="https://localhost:5173/rcc-addin/index.html"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="GetStarted.Title" DefaultValue="Get started with your sample add-in!"/>
@@ -120,9 +211,12 @@
 
         <!-- Strings agregados para la pestaña personalizada -->
         <bt:String id="TabRichardAddin.Label" DefaultValue="RichardAddin"/>
+        <bt:String id="GroupPython.Label" DefaultValue="Python"/>
+        <bt:String id="BtnTaskpaneRuta.Label" DefaultValue="Ruta"/>
+        
         <bt:String id="GroupProductividad.Label" DefaultValue="Productividad"/>
-        <bt:String id="BtnMayuscula.Label" DefaultValue="MAY"/>
-        <bt:String id="BtnMinuscula.Label" DefaultValue="min"/>
+        <bt:String id="BtnMayuscula.Label" DefaultValue="Mayuscula"/>
+        <bt:String id="BtnMinuscula.Label" DefaultValue="Minuscula"/>
         <bt:String id="BtnAgruparCeldas.Label" DefaultValue="combinar"/>
         <bt:String id="BtnOracion.Label" DefaultValue="Oracion"/>
         <bt:String id="BtnPrimera.Label" DefaultValue="Primera"/>
@@ -132,6 +226,8 @@
         <bt:String id="GetStarted.Description" DefaultValue="Your sample add-in loaded successfully. Go to the HOME tab and click the 'Show Task Pane' button to get started."/>
         <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Click to Show a Taskpane"/>
         <!-- Tooltips agregados -->
+        <bt:String id="BtnTaskpaneRuta.Tooltip" DefaultValue="Ruta para definir donde estan los py"/>
+        
         <bt:String id="BtnMayuscula.Tooltip" DefaultValue="Convertir selección a mayúsculas"/>
         <bt:String id="BtnMinuscula.Tooltip" DefaultValue="Convertir selección a minúsculas"/>
         <bt:String id="BtnAgruparCeldas.Tooltip" DefaultValue="Combinar celdas"/>
